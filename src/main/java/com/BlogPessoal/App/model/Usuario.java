@@ -1,5 +1,6 @@
 package com.BlogPessoal.App.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -13,7 +14,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 
 @Entity
 @Table(name = "tb_usuario")
@@ -40,8 +40,8 @@ public class Usuario {
 	private String tipo;
 
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties("usuario")
-	private List<Postagem> postagem;
+	@JsonIgnoreProperties("postagem")
+	private List<Postagem> postagem = new ArrayList<>();
 
 	public String getFoto() {
 		return foto;
