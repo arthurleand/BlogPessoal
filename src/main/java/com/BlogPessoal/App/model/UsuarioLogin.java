@@ -16,6 +16,7 @@ public class UsuarioLogin {
 
 	private String tipo;
 
+
 	public Long getId() {
 		return id;
 	}
@@ -73,3 +74,4 @@ public class UsuarioLogin {
 	}
 
 }
+
