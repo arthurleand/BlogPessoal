@@ -55,6 +55,7 @@ public class UsuarioService {
 				usuarioLogin.get().setSenha(usuario.get().getSenha());
 				
 				return usuarioLogin;
+
 			}
 		}		
 		throw new ResponseStatusException(
